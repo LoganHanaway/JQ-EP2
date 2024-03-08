@@ -41,13 +41,16 @@ $(document).ready(function() {
     
         if (sortingStyle === 'alphabetical') {
             // Sort alphabetically by title
+            console.log('1')
             listItems = $('#filmList ol li').get();
             listItems.sort(function(a, b) {
                 const textA = $(a).text().toUpperCase();
                 const textB = $(b).text().toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             });
+            console.log('2')
         } else if (sortingStyle === 'numerical') {
+            console.log('a')
             // Sort numerically by rating
             listItems = $('#filmList ol li').get();
             listItems.sort(function(a, b) {
@@ -57,6 +60,7 @@ $(document).ready(function() {
                 console.log("Rating B:", ratingB);
                 return ratingA - ratingB;
             });
+            console.log('b')
         }
     
         // Reverse the list if the sorting order is descending
@@ -64,8 +68,13 @@ $(document).ready(function() {
             listItems.reverse(); // Reverse the listItems array
         }
     
-        // Clear the existing list and append the sorted list
-        $('#filmList ol').empty().append(listItems);
+        // Clear the existing list
+        $('#filmList ol').empty();
+
+        // Append the sorted list items to the <ol> element
+        $.each(listItems, function(index, item) {
+            $('#filmList ol').append(item);
+        });
     };
     
     
@@ -78,10 +87,11 @@ $(document).ready(function() {
     let alphabetical = true;
 
     // Event handler for sorting
-    $sort.on('click', function(e) {
+    $(document).on('click', '#sort', function(e) {
         e.preventDefault();
         sortOptions();
     });
+    
 
     // Event handler for changer sorting style
     $('#sortStyle').on('change', function(e){
