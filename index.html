@@ -15,9 +15,13 @@
         <input id="title" type="text" placeholder="Movie Title" style="height:25px;width:300px">
         <input id="rating" type="number" min="0" max="10" placeholder="Rating" style="height:25px;width:80px">
         <button id="addMovie" type="submit" style="height:30px;width:70px">Submit</button>
-        <select style="height:30px;width:150px">
+        <select id="sortStyle" style="height:30px;width:150px">
             <option value="alphabetical">Alphabetical by title</option>
             <option value="numerical">Numerical by rating</option>
+        </select>
+        <select id="sortOrder" style="height:30px;width:150px">
+            <option value="ascending">Ascending</option>
+            <option value="descending">Descending</option>
         </select>
         <button id="sort" type="submit" style="height:30px;width:70px">Sort</button>
     </form>
