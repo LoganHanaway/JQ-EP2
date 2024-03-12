@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- <link rel="stylesheet" href="app.css"> -->
     <title>jQuery Project2</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Movies list</h1>
     <form>
-        <input id="title" type="text" placeholder="Movie Title" style="height:25px;width:300px">
-        <input id="rating" type="number" min="0" max="10" placeholder="Rating" style="height:25px;width:80px">
-        <button id="addMovie" type="submit" style="height:30px;width:70px">Submit</button>
-        <select id="sortStyle" style="height:30px;width:150px">
-            <option value="alphabetical">Alphabetical by title</option>
-            <option value="numerical">Numerical by rating</option>
-        </select>
-        <select id="sortOrder" style="height:30px;width:150px">
-            <option value="ascending">Ascending</option>
-            <option value="descending">Descending</option>
-        </select>
-        <button id="sort" type="button" style="height:30px;width:70px">Sort</button>
+      <input
+        id="title"
+        type="text"
+        placeholder="Movie Title"
+        style="height: 25px; width: 300px"
+      />
+      <input
+        id="rating"
+        type="number"
+        min="0"
+        max="10"
+        placeholder="Rating"
+        style="height: 25px; width: 80px"
+      />
+      <button id="addMovie" type="submit" style="height: 30px; width: 70px">
+        Submit
+      </button>
+      <select id="sortStyle" style="height: 30px; width: 150px">
+        <option value="alphabetical">Alphabetical by title</option>
+        <option value="numerical">Numerical by rating</option>
+      </select>
+      <select id="sortOrder" style="height: 30px; width: 150px">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+      <button id="sort" type="button" style="height: 30px; width: 70px">
+        Sort
+      </button>
     </form>
     <div id="filmList">
-        <ol>
-
-        </ol>
+      <ol></ol>
     </div>
-</body>
-<footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  </body>
+  <footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js"></script>
-</footer>
-
+  </footer>
 </html>
